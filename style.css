@@ -20,7 +20,7 @@ body {
     width: 800px; height: 400px;
     border: 1px solid #000;
     position: absolute; top: 50%; left: 50%;
-    margin-left: -400px; margin-top: -200px;
+    transform: translate(-50%, -50%);
 }
 #tab .menu {
     width: 200px; height: 100%;
@@ -38,14 +38,24 @@ body {
     background: rgba(0,0,0,.9); color: yellow;
 }
 #tab .boxs > div {
-    width: 600px; height: 400px; background: rgba(0,0,0,.6);
+    width: 600px; background: rgba(0,0,0,.6);
     position: absolute; top: 0px; right: 0px; display: none;
-}
-#tab .boxs > div#tab1 {
-    display: block;
 }
 #tab .boxs > div  span {
     font: bold 40px/1 "arial"; color: #fff;
     position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
+}
+#tab .boxs > div#tab1 {
+    display: block;
+    height: 400px; 
+}
+#tab .boxs > div#tab2 {
+    height: 350px;
+}
+#tab .boxs > div#tab3 {
+    height: 380px;
+}
+#tab .boxs > div#tab4 {
+    height: 300px;
 }

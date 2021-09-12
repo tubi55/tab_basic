@@ -1,7 +1,8 @@
 var $tab = $("#tab");
 var $btns = $tab.find(".btns li a");
 var $boxs = $tab.find(".boxs div");
-var speed = 5000;
+var speed = 500;
+var ease = "easeOutBounce";
 var enableClick = true;
 
 $btns.on("click", function(e){
@@ -16,9 +17,11 @@ $btns.on("click", function(e){
     }    
 });
 
-function activation(el){
-    console.log("activaiton");
+function activation(el){   
     var target = $(el).attr("href");
+    var targetHT = $(target).height();
+    
+    $tab.animate({height : targetHT}, speed, ease);
 
     $boxs.fadeOut(speed);
     $(target).fadeIn(speed,function(){
